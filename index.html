@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Vowels with Cyrillic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Vowel to Cyrillic Replacer</h1>
+    <textarea id="inputText" placeholder="Enter your text here"></textarea>
+    <br>
+    <button onclick="replaceVowels()">Replace Vowels</button>
+    <h2>Output:</h2>
+    <textarea id="outputText" readonly></textarea>
+
+    <script>
+        function replaceVowels() {
+            const vowelMap = {
+                'A': 'А', 'E': 'Е', 'I': 'И', 'O': 'О', 'U': 'У', 'Y': 'Ы',
+                'a': 'а', 'e': 'е', 'i': 'и', 'o': 'о', 'u': 'у', 'y': 'ы'
+            };
+
+            let input = document.getElementById('inputText').value;
+            let output = input.replace(/[AEIOUYaeiouy]/g, function(match) {
+                return vowelMap[match] || match;
+            });
+
+            document.getElementById('outputText').value = output;
+        }
+    </script>
+
+</body>
+</html>
