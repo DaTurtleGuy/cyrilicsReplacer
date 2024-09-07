@@ -1,12 +1,12 @@
 # Vowel to Cyrillic Replacer
 
+## (Honestly, i just made this at 3am cause i needed to get around some filter, and replacing each letter one by on in notepad took too much time RAAAAHHHHH)
+
 A simple web tool that replaces English vowels (A, E, O, a, e, o) in your text with their corresponding Cyrillic characters (А, Е, О, а, е, о).
 
 ## Try It Out:
 
 **[https://daturtleguy.github.io/cyrilicsReplacer/](https://daturtleguy.github.io/cyrilicsReplacer/)**
-
-## (Honestly, i just made this at 3am cause i needed to get around some filter, and replacing each letter one by on in notepad took too much time RAAAAHHHHH)
 
 ## Features:
 
