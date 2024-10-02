@@ -35,6 +35,7 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin-right: 5px;
         }
         button:hover {
             background-color: #3700b3;
@@ -79,6 +80,7 @@
     <textarea id="inputText" placeholder="Enter your text here"></textarea>
     <br>
     <button onclick="replaceVowels()">Replace Vowels</button>
+    <button onclick="replaceCyrillic()">Replace Cyrillic</button>
     <h2>Output:</h2>
     <textarea id="outputText" readonly></textarea>
 
@@ -92,6 +94,20 @@
             let input = document.getElementById('inputText').value;
             let output = input.replace(/[AEIOUYaeiouy]/g, function(match) {
                 return vowelMap[match] || match;
+            });
+
+            document.getElementById('outputText').value = output;
+        }
+
+        function replaceCyrillic() {
+            const cyrillicMap = {
+                'А': 'A', 'Е': 'E', 'О': 'O',
+                'а': 'a', 'е': 'e', 'о': 'o'
+            };
+
+            let input = document.getElementById('inputText').value;
+            let output = input.replace(/[АЕОаео]/g, function(match) {
+                return cyrillicMap[match] || match;
             });
 
             document.getElementById('outputText').value = output;
